@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal portfolio</title>
+    <link rel="stylesheet"href="style.css">
+</head>
+<body>
+ <div id="header">
+    <div class="container">
+        <nav>
+           
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#service">Service</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>UI/UX Designer</p>
+            <h1>Hi,I'm <span> Devu Prasad</span></h1>
+        </div>
+    </div>
+
+ </div> 
+ 
+ <div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1"></div>
+            <img src="images/devu.png"alt="">
+               <h1 class="sub-title">About Me</h1>
+               <p>I'm Devu, a front-end web developer focused on building clean, responsive, and user-friendly websites. I work with HTML and CSS to create simple, effective layouts that prioritize usability and design clarity. I value minimalism, structure, and seamless user experiences. Currently, I'm exploring JavaScript to expand my development skills and create more interactive web projects.</p>
+
+               <div class="tab-titles">
+                 <p class="tab-links active-link"onclick="opentab('skills')">Skills</p>
+                 <p class="tab-links"onclick="opentab('experience')">Experience</p>
+                 <p class="tab-links"onclick="opentab('education')">Education</p>
+               </div>
+               <div class="tab-contents active-tab"id="skills">
+                <ul>
+                    <li><span>UI/UX</span><br>Designing Web/App interface</li>
+                    <li><span>Web Development</span><br>Web app development</li>
+                    <li><span>App Development</span><br>Building Android/ios apps</li>
+                </ul>
+               </div>
+               <div class="tab-contents"id="experience">
+                <ul>
+
+               <li><span>2024-Current</span><br>Team lead at Microsoft<br></li>
+               <li><span>2023-2024</span><br>UI/UX Desigh Executive at Coin</li>
+               <li><span>2022-2023</span><br>Internship at GOOGLE</li>
+             </ul>
+        </div>
+        <div class="tab-contents"id="education">
+            <ul>
+
+           <li><span>2020</span><br>B-tech from Avv Amritapuri<br></li>
+           <li><span>2021</span><br>UI/UX Desigh Training</li>
+           <li><span>2022</span><br>Coding skill development </li>
+         </ul>
+    </div>
+ </div>
+ <!--------services---------->
+ <div id="services">
+    <div class="container">
+        <h1 class="sub-title">My services</h1>
+        <div class="services-list">
+            <div>
+                <h2>Web Redesign</h2>
+                <p>Give your old website a fresh, modern makeover with improved aesthetics and functionality.
+
+                </p>
+                <a href="#">Learn more</a>
+            </div>
+
+        
+        <div>
+            <h2>UI/UX Design</h2>
+            <p>Intuitive user interfaces and seamless user experiences built with modern design principles.</p>
+            <a href="#">Learn more</a>
+        </div>
+        <div>
+            <h2>Responsive Design</h2>
+            <p>
+                Mobile-first, fully responsive layouts that look great on all devices – from phones to desktops.
+            </p>
+            <a href="#">Learn more</a>
+        </div>
+
+    </div>
+
+ </div>
+ <!---------contact--------->
+ <div class="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p>devuprasad04@gmail.com</p>
+                <p>0123456789</p>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email"placeholder ="Your Email"required>
+                        <textarea name="Message"rows="6"placeholder="Your Message"></textarea>
+                        <button type="Submit">Submit</button>
+                                      
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+       
+
+        </div>
+    </div>
+ </div>
+ <script>
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+ </script>
+</body>
+</html>
